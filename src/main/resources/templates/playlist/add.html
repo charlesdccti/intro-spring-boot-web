@@ -25,7 +25,7 @@
     <form th:action="@{/playlists/salvar}" th:method="post" th:object="${playlist}">
         <div class="row">
             <input id="id" type="hidden" th:field="*{id}"/>
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-4">   
                 <label for="nome">Nome:</label>
                 <input class="form-control" id="nome"
                        type="text" th:field="*{nome}"/>
