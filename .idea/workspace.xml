@@ -5,6 +5,9 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/br/com/devmedia/controller/MusicaController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/templates/musica/add.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/templates/musica/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/br/com/devmedia/controller/MusicaController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/musica/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/musica/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -395,12 +398,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524799174225</updated>
-      <workItem from="1524799177644" duration="25905000" />
+      <workItem from="1524799177644" duration="26212000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25905000" />
+    <option name="totallyTimeSpent" value="26212000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -432,10 +435,10 @@
       <window_info id="Image Layers" />
       <window_info anchor="bottom" id="Java Enterprise" weight="0.32894737" />
       <window_info anchor="right" id="Capture Analysis" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.72587717" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.48135966" />
       <window_info anchor="bottom" id="Version Control" weight="0.32894737" />
       <window_info anchor="bottom" id="Spring" weight="0.32894737" />
-      <window_info anchor="bottom" id="Terminal" sideWeight="0.49947864" weight="0.32894737" />
+      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.49947864" visible="true" weight="0.6447368" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14658849" />
       <window_info anchor="right" id="Bean Validation" visible="true" weight="0.22068231" />
       <window_info id="Web" side_tool="true" />
