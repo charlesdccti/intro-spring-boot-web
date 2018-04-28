@@ -49,24 +49,24 @@ public class PlaylistController {
     }
 
 
-    //    @GetMapping("/{id}/atualizar")
-    //    public ModelAndView preAtualizar (@PathVariable("id") long id, ModelMap model) {
-    //        Playlist playlist = playlistService.recuperarPorId(id);
-    //        model.addAttribute("playlist", playlist);
-    //        return new ModelAndView("/playlist/add", model);
-    //    }
-    //
-    //    @PutMapping("/salvar")
-    //    public ModelAndView atualizar (@Valid @ModelAttribute("playlist") Playlist playlist, BindingResult result, RedirectAttributes attr) {
-    //        if (result.hasErrors()) {
-    //            return new ModelAndView("/playlist/add");
-    //        }
-    //
-    //        playlistService.atualizar(playlist);
-    //        attr.addFlashAttribute("mensagem", "Playlist atualizada com sucesso.");
-    //        return new ModelAndView("redirect:/playlists/listar");
-    //    }
-    //
+    @GetMapping("/{id}/atualizar")
+    public ModelAndView preAtualizar (@PathVariable("id") long id, ModelMap model) {
+        Playlist playlist = playlistService.recuperarPorId(id);
+        model.addAttribute("playlist", playlist);
+        return new ModelAndView("/playlist/add", model);
+    }
+
+    @PutMapping("/salvar")
+    public ModelAndView atualizar (@Valid @ModelAttribute("playlist") Playlist playlist, BindingResult result, RedirectAttributes attr) {
+        if (result.hasErrors()) {
+            return new ModelAndView("/playlist/add");
+        }
+
+        playlistService.atualizar(playlist);
+        attr.addFlashAttribute("mensagem", "Playlist atualizada com sucesso.");
+        return new ModelAndView("redirect:/playlists/listar");
+    }
+
     //    @GetMapping("/{id}/remover")
     //    public String remover (@PathVariable("id") long id, RedirectAttributes attr) {
     //        playlistService.excluir(id);
