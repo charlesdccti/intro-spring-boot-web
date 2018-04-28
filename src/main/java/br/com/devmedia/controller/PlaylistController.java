@@ -56,6 +56,7 @@ public class PlaylistController {
         return new ModelAndView("/playlist/add", model);
     }
 
+
     @PutMapping("/salvar")
     public ModelAndView atualizar (@Valid @ModelAttribute("playlist") Playlist playlist, BindingResult result, RedirectAttributes attr) {
         if (result.hasErrors()) {
@@ -67,11 +68,12 @@ public class PlaylistController {
         return new ModelAndView("redirect:/playlists/listar");
     }
 
-    //    @GetMapping("/{id}/remover")
-    //    public String remover (@PathVariable("id") long id, RedirectAttributes attr) {
-    //        playlistService.excluir(id);
-    //        attr.addFlashAttribute("mensagem", "Playlist excluÃ­da com sucesso.");
-    //        return "redirect:/playlists/listar";
-    //    }
+
+    @GetMapping("/{id}/remover")
+    public String remover (@PathVariable("id") long id, RedirectAttributes attr) {
+        playlistService.excluir(id);
+        attr.addFlashAttribute("mensagem", "Playlist excluída com sucesso.");
+        return "redirect:/playlists/listar";
+    }
 
 }
