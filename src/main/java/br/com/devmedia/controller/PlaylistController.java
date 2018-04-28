@@ -25,22 +25,30 @@ public class PlaylistController {
         return new ModelAndView("/playlist/list", model);
     }
 
-    //    @GetMapping("/cadastro")
-    //    public String preSalvar (@ModelAttribute("playlist") Playlist playlist) {
-    //        return "/playlist/add";
-    //    }
-    //
-    //    @PostMapping("/salvar")
-    //    public String salvar (@Valid @ModelAttribute("playlist") Playlist playlist, BindingResult result, RedirectAttributes attr) {
-    //        if (result.hasErrors()) {
-    //            return "/playlist/add";
-    //        }
-    //
-    //        playlistService.salvar(playlist);
-    //        attr.addFlashAttribute("mensagem", "Playlist criada com sucesso.");
-    //        return "redirect:/playlists/listar";
-    //    }
-    //
+    /**
+     * Responsavel direcionar o usuário para tela de cadastro
+     *
+     * @param playlist - @ModelAtribute faz o binding  entre objeto "playlist" do formulário para o objeto playlist do controller
+     * @return String - adicao de playlist
+     */
+    @GetMapping("/cadastro")
+    public String preSalvar (@ModelAttribute("playlist") Playlist playlist) {
+        return "/playlist/add";
+    }
+
+
+    @PostMapping("/salvar")
+    public String salvar (@Valid @ModelAttribute("playlist") Playlist playlist, BindingResult result, RedirectAttributes attr) {
+        if (result.hasErrors()) {
+            return "/playlist/add";
+        }
+
+        playlistService.salvar(playlist);
+        attr.addFlashAttribute("mensagem", "Playlist criada com sucesso.");
+        return "redirect:/playlists/listar";
+    }
+
+
     //    @GetMapping("/{id}/atualizar")
     //    public ModelAndView preAtualizar (@PathVariable("id") long id, ModelMap model) {
     //        Playlist playlist = playlistService.recuperarPorId(id);
