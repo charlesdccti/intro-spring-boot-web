@@ -10,6 +10,6 @@ En outre, j'ai aussi utilisé les technologies suivantes:
 - MySQL
 - Maven.
 
-Site Web: about.me/charles.ferreira
+Site:  about.me/charles.ferreira
 
 Au revoir!
